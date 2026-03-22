@@ -1,4 +1,4 @@
-const fs = require('fs');
+//const fs = require('fs');
 
 //....................writeFile.........................
 /*
@@ -20,10 +20,19 @@ fs.writeFile('output.txt', 'Hello, World!', (err) => {
 */
 
 //....................rename.........................
-
+/*
 fs.rename('output.txt', 'newOutput.txt', function(err){
     if (err)
         console.error(err);
         else
         console.log('done');
 })
+        */
+const http = require('http');
+
+
+const server =http.createServer(function(req, res){
+     res.end("Hello World");
+})
+server.listen(3000);
+
